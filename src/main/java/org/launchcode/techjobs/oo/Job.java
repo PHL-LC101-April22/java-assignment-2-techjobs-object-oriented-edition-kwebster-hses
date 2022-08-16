@@ -155,7 +155,7 @@ public class Job {
 
         String x = String.valueOf((counter));
        // System.out.println(x);
-        String studentReport = String.format("\n Name: %s \n Employer: %s \n Location: %s \n ID: %d \n Corecompetency: %s \n PositionType: %s \n %s", this.getName(), this.getEmployer(),this.getLocation(), this.getId(), this.getCoreCompetency(), this.getPositionType(), exist);
+        String studentReport = String.format("\n Name: %s \n Employer: %s \n Location: %s \n ID: %d \n Corecompetency: %s \n PositionType: %s \n %s \n", this.getName(), this.getEmployer(),this.getLocation(), this.getId(), this.getCoreCompetency(), this.getPositionType(), exist);
         return studentReport;
 
         }

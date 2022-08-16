@@ -1,5 +1,6 @@
 package org.launchcode.techjobs.oo.test;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -50,11 +51,23 @@ public class JobTest {
         assertTrue(String.valueOf(b), true);
         //3
         assertTrue(newJ.getName(), true);
-        assertEquals(new String(String.valueOf(newJ.getName())),"Product tester");
         //4
-        assertEquals(new String(String.valueOf(newJ.getLocation())),"Desert");
+        assertEquals(new String(String.valueOf(newJ.getName())),"Product tester");
         //5
+        assertEquals(new String(String.valueOf(newJ.getLocation())),"Desert");
+        //6
         assertEquals(new String(String.valueOf(newJ.getCoreCompetency())),"Persistence");
+        //7
+        assertEquals(new String(String.valueOf(newJ.getPositionType())),"Quality Control");
+        //8
+        assertTrue(String.valueOf(b), true);
+        //9
+        assertTrue(newJ.getName(), true);
+        //10
+        assertTrue(String.valueOf(b), true);
+
+
+
 
     }
 
@@ -75,9 +88,16 @@ public class JobTest {
 
     @Test
     public void testToStringStartsAndEndsWithNewLine () {
-        Job newJ = new Job();
+        Job newJ = this.createCarObject();
+        String x = newJ.toString();
+        String begin = x.substring(0,1);
+        String end = x.substring(x.length()-1,x.length());
+
+
+        System.out.println(begin+"lox"+end+"PHL");
         // "Product tester", Employer("ACME"),Location("Desert"),PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertEquals(newJ.toString(),"\n Name: Data Not Available \n Employer: Data Not Available \n Location: Data Not Available \n ID: 1 \n Corecompetency: Data Not Available \n PositionType: Data Not Available \n Job does not exist");
+        Assert.assertEquals(begin,"\n");
+        Assert.assertEquals(end,"\n");
     }
 
     @Test
