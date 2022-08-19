@@ -21,11 +21,13 @@ public class JobTest {
        return test_job;
 
     }
+    // AYE BOI WE WANT TO CREATE AN ABSTRACT CLASS FOR ALL OF THE GETTERS AND SETTERS THAT SHARE COMMON VARIABLES NOT METHODS
 
     @Test
     public void createObject() {
         Job newJ = this.createCarObject();
-        System.out.println(newJ.getPositionType());
+        System.out.println(newJ);
+        System.out.println(newJ.getId());
 
 
     }
@@ -58,7 +60,7 @@ public class JobTest {
         //6
         assertEquals(new String(String.valueOf(newJ.getCoreCompetency())),"Persistence");
         //7
-        assertEquals(new String(String.valueOf(newJ.getPositionType())),"Quality Control");
+        assertEquals(new String(String.valueOf(newJ.getPositionType())),"Quality control");
         //8
         assertTrue(String.valueOf(b), true);
         //9
